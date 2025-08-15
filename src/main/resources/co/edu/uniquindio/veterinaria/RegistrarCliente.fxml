@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.2"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.uniquindio.veterinaria.controllers.RegistrarClienteController"
+      spacing="12" alignment="CENTER" prefWidth="520" prefHeight="260" style="-fx-background-color: white;">
+    <children>
+        <Label text="Registrar Cliente" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+        <GridPane hgap="10" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints minWidth="120"/>
+                <ColumnConstraints minWidth="260"/>
+            </columnConstraints>
+            <children>
+                <Label text="Nombre:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtNombre" promptText="Nombre completo" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Teléfono:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtTelefono" promptText="Ej: 3001234567" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Dirección:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtDireccion" promptText="Calle 123 #45-67" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            </children>
+        </GridPane>
+
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <children>
+                <Button text="Guardar" onAction="#guardarCliente"/>
+                <Button text="Cancelar" onAction="#cancelar"/>
+            </children>
+        </HBox>
+    </children>
+    <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+</VBox>

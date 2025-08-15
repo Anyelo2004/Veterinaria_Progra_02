@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.2"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.uniquindio.veterinaria.controllers.MenuPrincipalController"
+      alignment="CENTER" spacing="14" prefWidth="420" prefHeight="420"
+      style="-fx-background-color: linear-gradient(to bottom, #ffffff, #f6f7fb);">
+    <children>
+        <Label text="Mundo Huellitas" style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+        <Label text="Carrera 23 #44-55" style="-fx-text-fill: #555;"/>
+        <Separator prefWidth="260"/>
+        <VBox spacing="10" alignment="CENTER">
+            <children>
+                <Button text="Registrar Cliente"    onAction="#abrirRegistrarCliente"    maxWidth="260"/>
+                <Button text="Registrar Mascota"    onAction="#abrirRegistrarMascota"    maxWidth="260"/>
+                <Button text="Registrar Cita"       onAction="#abrirRegistrarCita"       maxWidth="260"/>
+                <Button text="Registrar Empleado"   onAction="#abrirRegistrarEmpleado"   maxWidth="260"/>
+                <Button text="Gestión de Citas"     onAction="#abrirGestionCitas"        maxWidth="260"/>
+            </children>
+        </VBox>
+        <Separator prefWidth="260"/>
+        <Button text="Salir" onAction="#salir" maxWidth="140"/>
+    </children>
+    <padding>
+        <Insets top="24" right="24" bottom="24" left="24"/>
+    </padding>
+</VBox>

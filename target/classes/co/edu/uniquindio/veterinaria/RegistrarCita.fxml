@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.2"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.uniquindio.veterinaria.controllers.RegistrarCitaController"
+      spacing="12" alignment="CENTER" prefWidth="620" prefHeight="420" style="-fx-background-color: white;">
+    <children>
+        <Label text="Registrar Cita" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+        <GridPane hgap="10" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints minWidth="200"/>
+                <ColumnConstraints minWidth="340"/>
+            </columnConstraints>
+            <children>
+                <Label text="Fecha:" GridPane.rowIndex="0"/>
+                <DatePicker fx:id="dtpFecha" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Hora:" GridPane.rowIndex="1"/>
+                <TextField fx:id="txtHora" promptText="HH:mm" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Mascota atendida:" GridPane.rowIndex="2"/>
+                <ComboBox fx:id="cmbMascota" promptText="Seleccione mascota" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Peso (kg):" GridPane.rowIndex="3"/>
+                <TextField fx:id="txtPeso" promptText="Ej: 4.5" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <Label text="Veterinario asignado:" GridPane.rowIndex="4"/>
+                <ComboBox fx:id="cmbVeterinario" promptText="Seleccione veterinario" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                <Label text="Identificación veterinario:" GridPane.rowIndex="5"/>
+                <TextField fx:id="txtIdentificacionVet" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                <Label text="Motivo consulta:" GridPane.rowIndex="6"/>
+                <TextArea fx:id="txtMotivo" prefRowCount="3" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+            </children>
+        </GridPane>
+
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <children>
+                <Button text="Guardar Cita" onAction="#guardarCita"/>
+                <Button text="Cancelar" onAction="#cancelar"/>
+            </children>
+        </HBox>
+    </children>
+    <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+</VBox>

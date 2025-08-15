@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.2"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.uniquindio.veterinaria.controllers.RegistrarEmpleadoController"
+      spacing="12" alignment="CENTER" prefWidth="640" prefHeight="420" style="-fx-background-color: white;">
+    <children>
+        <Label text="Registrar Empleado" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+        <GridPane hgap="10" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints minWidth="200"/>
+                <ColumnConstraints minWidth="320"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="32"/>
+                <RowConstraints minHeight="32"/>
+                <RowConstraints minHeight="32"/>
+                <RowConstraints minHeight="32"/>
+                <RowConstraints minHeight="32"/>
+                <RowConstraints minHeight="32"/>
+            </rowConstraints>
+            <children>
+                <Label text="Nombre:" GridPane.rowIndex="0"/>
+                <TextField fx:id="txtNombre" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Identificación:" GridPane.rowIndex="1"/>
+                <TextField fx:id="txtIdentificacion" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Dirección:" GridPane.rowIndex="2"/>
+                <TextField fx:id="txtDireccion" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Teléfono:" GridPane.rowIndex="3"/>
+                <TextField fx:id="txtTelefono" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <Label text="Cargo:" GridPane.rowIndex="4"/>
+                <TextField fx:id="txtCargo" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                <Label text="Especialidad:" GridPane.rowIndex="5"/>
+                <ComboBox fx:id="cmbEspecialidad" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+            </children>
+        </GridPane>
+
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <children>
+                <Button text="Guardar Empleado" onAction="#guardarEmpleado"/>
+                <Button text="Cancelar" onAction="#cancelar"/>
+            </children>
+        </HBox>
+    </children>
+    <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+</VBox>

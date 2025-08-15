@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="co.edu.uniquindio.veterinaria.controllers.GestionCitasController" 
+      spacing="10" alignment="TOP_CENTER" style="-fx-padding: 15;">
+    
+    <!-- Barra de búsqueda por fecha -->
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Buscar por fecha:" />
+        <DatePicker fx:id="datePickerBusqueda" />
+        <Button text="Buscar" onAction="#buscarPorFecha" />
+    </HBox>
+
+    <!-- Tabla de citas -->
+    <TableView fx:id="tablaCitas" prefHeight="300" prefWidth="600">
+        <columns>
+            <TableColumn fx:id="colMascota" text="Mascota" prefWidth="100" />
+            <TableColumn fx:id="colPropietario" text="Propietario" prefWidth="120" />
+            <TableColumn fx:id="colFecha" text="Fecha" prefWidth="100" />
+            <TableColumn fx:id="colHora" text="Hora" prefWidth="80" />
+            <TableColumn fx:id="colVeterinario" text="Veterinario" prefWidth="120" />
+            <TableColumn fx:id="colIdVeterinario" text="ID Veterinario" prefWidth="100" />
+            <TableColumn fx:id="colMotivo" text="Motivo" prefWidth="150" />
+        </columns>
+    </TableView>
+
+    <!-- Botón Volver -->
+    <HBox alignment="CENTER_RIGHT">
+        <Button text="Volver" onAction="#volverMenu" />
+    </HBox>
+
+</VBox>
